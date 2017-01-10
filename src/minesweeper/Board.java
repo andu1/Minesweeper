@@ -120,7 +120,7 @@ public class Board {
     }
     
     public void randomMines(){
-        boolean raffled;
+        boolean randomized;
         int Line, Column;
         for(int i=0 ; i<10 ; i++){
             
@@ -129,10 +129,10 @@ public class Board {
                 Column = random.nextInt(8) + 1;
                 
                 if(mines[Line][Column] == -1)
-                    raffled=true;
+                    randomized=true;
                 else
-                    raffled = false;
-            }while(raffled);
+                    randomized = false;
+            }while(randomized);
             
             mines[Line][Column] = -1;
         }
