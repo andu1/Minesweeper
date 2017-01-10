@@ -24,7 +24,7 @@ public class Board {
         int count=0;
         for(int line = 1 ; line < 9 ; line++)
             for(int column = 1 ; column < 9 ; column++)
-                if(boardgame[line][column]=='_')
+                if(boardgame[line][column]=='□')
                     count++;
         if(count == 10)
             return true;
@@ -52,13 +52,13 @@ public class Board {
                 System.out.print("Column: "); 
                 Column = input.nextInt();
                 
-                if( (boardgame[Line][Column] != '_') && ((Line < 9 && Line > 0) && (Column < 9 && Column > 0)))
-                    System.out.println("Field already shown");
+                if( (boardgame[Line][Column] != '□') && ((Line < 9 && Line > 0) && (Column < 9 && Column > 0)))
+                    System.out.println("Area has been marked");
                 
                 if( Line < 1 || Line > 8 || Column < 1 || Column > 8)
-                    System.out.println("Choose a number between 1 and 8");
+                    System.out.println("Number is not in range");
                 
-            }while((Line < 1 || Line > 8 || Column < 1 || Column > 8) || (boardgame[Line][Column] != '_') );
+            }while((Line < 1 || Line > 8 || Column < 1 || Column > 8) || (boardgame[Line][Column] != '□') );
             
             if(getPosition(Line, Column)== -1)
                 return true;
@@ -110,7 +110,7 @@ public class Board {
     public void startBoard(){
         for(int i=1 ; i<mines.length ; i++)
             for(int j=1 ; j<mines.length ; j++)
-                boardgame[i][j]= '_';
+                boardgame[i][j]= '□';
     }
     
     public void startMines(){
