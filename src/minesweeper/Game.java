@@ -35,10 +35,10 @@ public class Game {
         }while(!finish);
         
         if(board.win()){
-            System.out.println("Congratulations, you let the 10 fields with the mines in "+turn+" turns");
+            System.out.println("You won in "+turn+" turns");
             board.showMines();
         } else {
-            System.out.println("Mine! You lost!");
+            System.out.println("You lost");
             board.showMines();
         }
     }

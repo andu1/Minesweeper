@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package minesweeper;
 
-/**
- *
- * @author wsxbi
- */
 import java.util.Random;
 import java.util.Scanner;
 
@@ -56,7 +47,7 @@ public class Board {
     public boolean setPosition(){
             
             do{
-                System.out.print("Line: "); 
+                System.out.print("\nLine: "); 
                 Line = input.nextInt();
                 System.out.print("Column: "); 
                 Column = input.nextInt();
